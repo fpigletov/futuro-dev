@@ -1,0 +1,627 @@
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 500
+    background-color: rgba(27, 27, 27, 0.8)
+    opacity: 0
+    visibility: hidden
+    &.active
+        opacity: 1
+        visibility: visible
+        transition: opacity 0.3s ease, visibility 0.3s ease
+
+    &__body
+        position: relative
+        border-radius: 20px
+        background-color: $pink-color
+        box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.6)
+        padding: 20px
+
+    &__close
+        position: absolute
+        top: -25px
+        right: -25px
+        cursor: pointer
+        color: $white-color
+        font-size: 26px
+        background-color: transparent
+        transition: color 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                color: $orange-color
+        @media (max-width: $md2)
+            color: $orange-color
+        @media (max-width: 600px)
+            top: -38px
+            right: 5px
+
+    &__content
+        border-radius: 20px
+        height: 100%
+
+    &__login
+        width: 300px
+        @media (max-width: 350px)
+            width: 260px
+
+    &__checkout
+        overflow-y: auto
+        overflow-x: hidden
+        height: 80vh
+        width: 470px
+        margin-right: -20px
+        @media (max-width: 600px)
+            width: 80vw
+            height: 70vh
+        @media (max-width: $md4)
+            width: 88vw
+        .form-modal__title
+            padding-right: 20px
+
+    &__login,
+    &__checkout,
+    &__message,
+    &__image,
+    &__favorite,
+    &__product,
+    &__blog
+        display: none
+        &.active
+            display: block
+
+    &__image
+        height: 450px
+        width: 450px
+        img
+            border-radius: 20px
+            width: 100%
+            height: 100%
+            object-fit: cover
+        @media (max-width: $md4)
+            height: 400px
+            width: 85vw
+
+    &__message
+        padding: 20px
+        line-height: 130%
+        text-align: center
+        font-size: 18px
+        font-weight: 900
+        background-color: $white-color
+        @media (max-width: $md4)
+            width: 250px
+
+    &__favorite,
+    &__product,
+    &__blog
+        background-color: $white-color
+        overflow-y: auto
+        overflow-x: hidden
+        padding: 20px
+
+    &__favorite
+        height: 80vh
+        width: 630px
+        @media (max-width: $md3)
+            width: 420px
+            padding: 30px
+        @media (max-width: $md4)
+            width: 78vw
+            height: 75vh
+            padding: 20px
+
+    &__product
+        height: 440px
+        width: 700px
+        @media (max-width: $md2)
+            width: 80vw
+        @media (max-width: $md3)
+            width: 42vw
+        @media (max-width: $md4)
+            width: 78vw
+            padding: 10px
+
+    &__blog
+        height: 78vh
+        width: 55vw
+        @media (max-width: $md3)
+            height: 75vh
+            width: 65vw
+        @media (max-width: $md4)
+            height: 75vh
+            width: 78vw
+
+.form-modal
+
+    &__title
+        text-align: center
+        margin-bottom: 20px
+
+    &__content
+        width: 100%
+
+    &__item
+        display: block
+        margin-bottom: 15px
+        width: 100%
+        padding-left: 2px
+
+    &__input
+        display: block
+        width: 100%
+        min-height: 31px
+        outline: none
+        padding: 0 10px
+        color: $gray-color
+        font-size: 12px
+        background-color: $white-color
+        transition: box-shadow 0.3 ease 0s
+
+    &__name
+        display: block
+        font-size: 14px
+        font-weight: 700
+        margin-bottom: 5px
+        span
+            color: $orange-color
+
+    &__tag
+        font-size: 14px
+        line-height: 120%
+        cursor: pointer
+        padding-left: 25px
+        &::before
+            top: 0
+        &::after
+            top: 3px
+        a
+            font-weight: 700
+            color: $orange-color
+            transition: color 0.3s ease 0s
+            @media (any-hover: hover)
+                &:hover
+                    color: $orange-hover-color
+
+    &__btn
+        height: 50px
+        margin-top: 15px
+        width: 100%
+
+    &__wrapper
+        height: 100%
+        width: 100%
+        display: flex
+        align-items: flex-start
+        margin-bottom: 15px
+        padding-right: 20px
+        @media (max-width: 600px)
+            flex-direction: column
+            margin-bottom: 45px
+
+    &__column
+        flex: 0 1 50%
+        &:not(:last-child)
+            margin-right: 20px
+        @media (max-width: 600px)
+            width: 100%
+            &:not(:last-child)
+                margin-right: 0
+
+    &__select
+        width: 100%
+        height: 31px
+
+    &__required
+        margin-top: 15px
+        font-size: 16px
+        font-weight: 700
+        span
+            color: $orange-color
+
+    &__order
+        padding-right: 20px
+        height: 100%
+
+//Select
+.choices
+    width: 100%
+    height: 31px
+    transition: box-shadow 0.3s ease
+    &.is-focused
+        box-shadow: 0 0 5px 2px $orange-color
+
+.choices__inner
+    margin: 0
+    padding: 0
+    padding-bottom: 0
+    border: none
+    align-items: flex-end
+    min-height: 31px
+    background-color: $white-color
+
+.choices[data-type*=select-one]::after
+    border: none
+    top: 45%
+    background: url('../resources/icons/icons/arrow-down.svg') center/cover no-repeat
+    height: 7px
+    width: 10px
+    transition: transform 0.3s ease, margin-top 0.3s ease
+
+.choices[data-type*=select-one].is-open::after
+    margin-top: -4px
+    transform: rotate(-180deg)
+
+.choices__list--single
+    padding: 10px 5px 0 10px
+
+.choices__list--single .choices__placeholder
+    color: $gray-color
+    font-size: 12px
+    opacity: 1
+
+.choices__list.choices__list--dropdown
+    border-top: none
+    font-size: 12px
+
+.choices__item
+    color: $gray-color
+    font-size: 12px
+
+.choices__item.choices__item--choice.choices__item--selectable
+    color: $gray-color
+    font-size: 12px
+    padding-right: 10px
+    transition: background-color 0.3s ease
+    &.is-highlighted
+        background-color: $light-blue-color
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after
+    display: none
+
+.order-checkout
+
+    &__title
+        font-size: 32px
+        margin-bottom: 10px
+
+    &__items
+        margin-bottom: 20px
+
+    &__item
+        padding: 10px
+        border: 1px solid $orange-color
+        &:not(:last-child)
+            margin-bottom: 15px
+
+    &__footer
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        padding-right: 20px
+
+    &__total
+        font-size: 24px
+        font-weight: 900
+        text-transform: uppercase
+        margin-bottom: 15px
+        span
+            font-size: 32px
+            color: $orange-color
+
+    &__btn
+        height: 36px
+        padding: 0 20px
+        &.hold
+            opacity: 0.2
+            cursor: default
+
+    &__empty
+        text-align: center
+        padding: 50px 0 80px 0
+
+.empty-checkout
+    color: $gray-color
+
+    &__text
+        margin-bottom: 10px
+
+.empty-link
+    font-size: 24px
+    font-weight: 700
+    a
+        color: $orange-color
+        font-weight: 500
+        text-decoration: underline
+        transition: all 0.3s ease 0s
+        text-decoration-color: $white-color
+        @media (any-hover: hover)
+            &:hover
+                text-decoration-color: $orange-color
+
+.empty-checkout__link
+    a
+        text-decoration-color: $pink-color
+
+.item-checkout
+    background-color: $white-color
+
+    &__top
+        display: flex
+        justify-content: flex-end
+
+    &__close
+        color: $gray-color
+        font-weight: 900
+        font-size: 24px
+        transition: color 0.3 ease 0s
+        align-self: flex-start
+        @media (any-hover: hover)
+            &:hover
+                color: $orange-color
+
+    &__wrapper
+        display: flex
+        align-items: center
+
+    &__content
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex: 1 1 auto
+
+    &__image
+        flex: 0 0 100px
+        height: 100px
+        margin-right: 25px
+        img
+            height: 100%
+        @media (max-width: 600px)
+            margin-right: 10px
+        @media (max-width: 350px)
+            flex: 0 0 90px
+            height: 90px
+
+    &__descr
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+    &__title
+        font-size: 14px
+        line-height: 130%
+        font-weight: 900
+        color: $orange-color
+        transition: all 0.3s ease 0s
+        margin-bottom: 5px
+        span
+            display: block
+        @media (any-hover: hover)
+            &:hover
+                color: $orange-hover-color
+
+    &__subtitle
+        font-weight: 300
+
+    &__price
+        font-size: 24px
+        font-weight: 900
+        display: flex
+        align-items: flex-end
+        flex-direction: row-reverse
+        &::before
+            font-size: 18px
+            padding-left: 3px
+
+    &__quantity
+        @media (max-width: 600px)
+            padding-right: 20px
+        @media (max-width: 350px)
+            padding-right: 5px
+
+    &__total
+        font-size: 16px
+        font-weight: 300
+        color: $gray-color
+        span
+            display: block
+            font-size: 24px
+            font-weight: 900
+            margin-top: 5px
+        @media (max-width: 600px)
+            display: none
+
+.favorite-modal
+
+    &__title
+        margin-bottom: 20px
+        text-align: center
+        @media (max-width: $md3)
+            margin-bottom: 30px
+        @media (max-width: $md4)
+            margin-bottom: 20px
+            font-size: 28px
+
+    &__body
+        border-radius: 20px
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fit, 275px)
+        gap: 20px
+
+        // @media (max-width: $md4)
+        //     .item-products__image
+        //         height: 230px
+
+    &__empty
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        width: 100%
+        height: 100%
+
+.empty-favorite
+
+    &__title
+        margin-bottom: 15px
+
+    &__link
+        a
+            text-decoration-color: $white-color
+
+.product-modal
+
+    &__body
+        width: 100%
+        height: 100%
+
+    &__content
+        @media (min-width: $md3)
+            display: flex
+            align-items: flex-start
+
+    &__slider
+        width: 280px
+        margin-bottom: 25px
+        @media (min-width: $md3)
+            flex: 0 1 280px
+            min-width: 0
+            margin-right: 30px
+        @media (max-width: $md4)
+            width: 100%
+            margin-bottom: 15px
+
+    &__title
+        margin-bottom: 2px
+        @media (max-width: $md4)
+            font-size: 30px
+
+    &__subtitle
+        font-size: 28px
+        font-weight: 600
+        color: $orange-color
+        margin-bottom: 30px
+        @media (max-width: $md3)
+            margin-bottom: 20px
+        @media (max-width: $md4)
+            margin-bottom: 15px
+            font-size: 24px
+
+    &__prices
+        margin-bottom: 20px
+
+    &__price
+        font-size: 28px
+        font-weight: 600
+        @media (max-width: $md4)
+            font-size: 24px
+
+        &_old
+            text-decoration-line: line-through
+            color: #b0b0b0
+            font-size: 20px
+            margin-bottom: 5px
+            @media (max-width: $md4)
+                font-size: 16px
+
+    &__descr
+        margin-bottom: 20px
+
+    &__key
+        font-size: 20px
+        font-weight: 400
+        color: $gray-color
+        span
+            font-weight: 600
+            margin-left: 10px
+        &:not(:last-child)
+            margin: 0 0 10px 0
+        @media (max-width: $md4)
+            font-size: 16px
+            &:not(:last-child)
+                margin: 0 0 5px 0
+
+    &__btn
+        height: 40px
+        padding: 0 30px
+        @media (max-width: $md4)
+            margin-bottom: 15px
+
+.slider-product
+
+    &__mainslider
+        margin-bottom: 13px
+
+    &__slide
+        cursor: pointer
+        height: 280px
+        width: 100%
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        @media (max-width: $md4)
+            height: 230px
+
+    &__subwrapper
+        display: flex
+        justify-content: center
+
+    &__subslide
+        cursor: pointer
+        border: 1px solid $gray-color
+        flex: 0 1 80px
+        height: 80px
+        opacity: 0.5
+        transition: all 0.3s ease 0s
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .swiper-slide-active
+        .slider-product__label
+            opacity: 1
+            visibility: visible
+
+    .swiper-slide-thumb-active
+        border: 3px solid $orange-color
+        opacity: 1
+
+.blog-modal
+
+    &__image
+        width: 100%
+        height: 100%
+        margin-bottom: 15px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__title
+        font-size: 26px
+        font-weight: 600
+        margin-bottom: 10px
+
+    &__date
+        color: #b0b0b0
+        font-size: 20px
+        margin-bottom: 10px
+
+    &__descr
+        span
+            display: block
+            color: $gray-color
+            &:not(:last-child)
+                margin-bottom: 10px
+
+.js-validate-error-label
+    padding-top: 5px

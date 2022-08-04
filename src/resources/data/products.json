@@ -1,0 +1,340 @@
+[
+    {
+        "id": 0,
+        "title": "Nord White",
+        "subtitle": "Nightstand",
+        "mainImageJpg": "img/products/01/01.jpg",
+        "mainImageWebp": "img/products/01/01.webp",
+        "mainImageAlt": "Nightstand",
+        "galleryJpg":[
+            "img/products/01/01.jpg",
+            "img/products/01/02.jpg",
+            "img/products/01/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/01/01.webp",
+            "img/products/01/02.webp",
+            "img/products/01/03.webp"
+        ],
+        "labelSale": "-15%",
+        "price": 250,
+        "oldPrice": 320,        
+        "descr": {
+            "Color:": "white/black",
+            "Country:": "Sweden",
+            "Width:": "50cm",
+            "Length:": "45cm",
+            "Height:": "55cm"
+        }
+    },
+    {
+        "id": 1,
+        "title": "Millak",
+        "subtitle": "Pillow",
+        "mainImageJpg": "img/products/02/01.jpg",
+        "mainImageWebp": "img/products/02/01.webp",
+        "mainImageAlt": "Pillow",
+        "galleryJpg":[
+            "img/products/02/01.jpg",
+            "img/products/02/02.jpg",
+            "img/products/02/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/02/01.webp",
+            "img/products/02/02.webp",
+            "img/products/02/03.webp"
+        ],
+        "labelNew": "New",
+        "price": 110,                
+        "descr": {
+            "Color:": "Brown",
+            "Country:": "Sweden",
+            "Material:": "100% Cotton", 
+            "Width:": "70cm",
+            "Length:": "25cm",
+            "Height:": "50cm"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Scoun 160",
+        "subtitle": "Queen Bed",
+        "mainImageJpg": "img/products/03/01.jpg",
+        "mainImageWebp": "img/products/03/01.webp",
+        "mainImageAlt": "Queen Bed",
+        "galleryJpg":[
+            "img/products/03/01.jpg",
+            "img/products/03/02.jpg",
+            "img/products/03/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/03/01.webp",
+            "img/products/03/02.webp",
+            "img/products/03/03.webp"
+        ],
+        "labelNew": "New",
+        "price": 2400, 
+        "descr": {
+            "Color:": "Yellow",
+            "Country:": "Spain",
+            "Material:": "100% Velvet", 
+            "Width:": "160cm",
+            "Length:": "200cm"            
+        }
+    },
+    {
+        "id": 3,
+        "title": "Frombork",
+        "subtitle": "King Bed",
+        "mainImageJpg": "img/products/04/01.jpg",
+        "mainImageWebp": "img/products/04/01.webp",
+        "mainImageAlt": "King Bed",
+        "galleryJpg":[
+            "img/products/04/01.jpg",
+            "img/products/04/02.jpg",
+            "img/products/04/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/04/01.webp",
+            "img/products/04/02.webp",
+            "img/products/04/03.webp"
+        ],
+        "labelSale": "-30%",
+        "price": 1550,  
+        "oldPrice": 1800,              
+        "descr": {
+            "Color:": "Brown",
+            "Country:": "Sweden",
+            "Material:": "100% Wood", 
+            "Width:": "185cm",
+            "Length:": "205cm"        
+        }
+    },
+    {
+        "id": 4,
+        "title": "Beller",
+        "subtitle": "Luxury Corner Sofa",
+        "mainImageJpg": "img/products/05/01.jpg",
+        "mainImageWebp": "img/products/05/01.webp",
+        "mainImageAlt": "Luxury Corner Sofa",
+        "galleryJpg":[
+            "img/products/05/01.jpg",
+            "img/products/05/02.jpg",
+            "img/products/05/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/05/01.webp",
+            "img/products/05/02.webp",
+            "img/products/05/03.webp"
+        ],
+        "labelSale": "-30%",
+        "price": 1700,  
+        "oldPrice": 2400,              
+        "descr": {
+            "Color:": "Gray",
+            "Country:": "Sweden",
+            "Material:": "Wood/Cotton", 
+            "Width:": "138cm",
+            "Length:": "220cm",        
+            "Height:": "90cm"        
+        }
+    },
+    {
+        "id": 5,
+        "title": "Stella",
+        "subtitle": "Luxury Tv Stand",
+        "mainImageJpg": "img/products/06/01.jpg",
+        "mainImageWebp": "img/products/06/01.webp",
+        "mainImageAlt": "Luxury Tv stand",
+        "galleryJpg":[
+            "img/products/06/01.jpg",
+            "img/products/06/02.jpg",
+            "img/products/06/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/06/01.webp",
+            "img/products/06/02.webp",
+            "img/products/06/03.webp"
+        ],
+        "labelNew": "New",
+        "price": 800,
+        "descr": {
+            "Color:": "Wood/White",
+            "Country:": "Spain",
+            "Material:": "100% Wood", 
+            "Width:": "138cm",
+            "Length:": "87cm",        
+            "Height:": "90cm"        
+        }
+    },
+    {
+        "id": 6,
+        "title": "Ivane Latte",
+        "subtitle": "Nightstand",
+        "mainImageJpg": "img/products/07/01.jpg",
+        "mainImageWebp": "img/products/07/01.webp",
+        "mainImageAlt": "Nightstand",
+        "galleryJpg":[
+            "img/products/07/01.jpg",
+            "img/products/07/02.jpg",
+            "img/products/07/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/07/01.webp",
+            "img/products/07/02.webp",
+            "img/products/07/03.webp"
+        ],
+        "labelSale": "-20%",
+        "price": 280,
+        "oldPrice": 360,        
+        "descr": {
+            "Color:": "Brown",
+            "Country:": "Norway",
+            "Width:": "52cm",
+            "Length:": "44cm",
+            "Height:": "54cm"
+        }
+    },
+    {
+        "id": 7,
+        "title": "Pippa",
+        "subtitle": "Pillow",
+        "mainImageJpg": "img/products/08/01.jpg",
+        "mainImageWebp": "img/products/08/01.webp",
+        "mainImageAlt": "Pillow",
+        "galleryJpg":[
+            "img/products/08/01.jpg",
+            "img/products/08/02.jpg",
+            "img/products/08/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/08/01.webp",
+            "img/products/08/02.webp",
+            "img/products/08/03.webp"
+        ],
+        "labelSale": "-25%",
+        "price": 90,     
+        "oldPrice": 120,           
+        "descr": {
+            "Color:": "Red",
+            "Country:": "Spain",
+            "Material:": "100% Cotton", 
+            "Width:": "70cm",
+            "Length:": "25cm",
+            "Height:": "50cm"
+        }
+    },
+    {
+        "id": 8,
+        "title": "Essantial Beige",
+        "subtitle": "Plaid Beige",
+        "mainImageJpg": "img/products/09/01.jpg",
+        "mainImageWebp": "img/products/09/01.webp",
+        "mainImageAlt": "Plaid",
+        "galleryJpg":[
+            "img/products/09/01.jpg",
+            "img/products/09/02.jpg",
+            "img/products/09/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/09/01.webp",
+            "img/products/09/02.webp",
+            "img/products/09/03.webp"
+        ],
+        "labelSale": "-15%",
+        "price": 190,     
+        "oldPrice": 220,           
+        "descr": {
+            "Color:": "Beige",
+            "Country:": "India",
+            "Material:": "100% Wool", 
+            "Width:": "130cm",
+            "Length:": "200cm"
+            
+        }
+    },
+    {
+        "id": 9,
+        "title": "Lobbi",
+        "subtitle": "Pouf",
+        "mainImageJpg": "img/products/10/01.jpg",
+        "mainImageWebp": "img/products/10/01.webp",
+        "mainImageAlt": "Pouf",
+        "galleryJpg":[
+            "img/products/10/01.jpg",
+            "img/products/10/02.jpg",
+            "img/products/10/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/10/01.webp",
+            "img/products/10/02.webp",
+            "img/products/10/03.webp"
+        ],
+        "labelNew": "New",
+        "price": 900,
+        "descr": {
+            "Color:": "Barhat Olive",
+            "Country:": "Sweden",
+            "Material:": "Wood, Cotton", 
+            "Width:": "60cm",
+            "Length:": "40cm",        
+            "Height:": "60cm"        
+        }
+    },
+    {
+        "id": 10,
+        "title": "Shentto",
+        "subtitle": "Luxury Chair",
+        "mainImageJpg": "img/products/11/01.jpg",
+        "mainImageWebp": "img/products/11/01.webp",
+        "mainImageAlt": "Luxury Chair",
+        "galleryJpg":[
+            "img/products/11/01.jpg",
+            "img/products/11/02.jpg",
+            "img/products/11/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/11/01.webp",
+            "img/products/11/02.webp",
+            "img/products/11/03.webp"
+        ],
+        "labelNew": "New",
+        "price": 1300,
+        "descr": {
+            "Color:": "Salmon",
+            "Country:": "France",
+            "Material:": "Wood, Cotton", 
+            "Width:": "86cm",
+            "Length:": "81cm",        
+            "Height:": "93cm"        
+        }
+    },
+    {
+        "id": 11,
+        "title": "Vition",
+        "subtitle": "Luxury Chair",
+        "mainImageJpg": "img/products/12/01.jpg",
+        "mainImageWebp": "img/products/12/01.webp",
+        "mainImageAlt": "Luxury Chair",
+        "galleryJpg":[
+            "img/products/12/01.jpg",
+            "img/products/12/02.jpg",
+            "img/products/12/03.jpg"            
+        ],
+        "galleryWebp":[
+            "img/products/12/01.webp",
+            "img/products/12/02.webp",
+            "img/products/12/03.webp"
+        ],
+        "labelNew": "New",
+        "price": 1100,
+        "descr": {
+            "Color:": "Yellow",
+            "Country:": "France",
+            "Material:": "Wood, Velvet", 
+            "Width:": "86cm",
+            "Length:": "84cm",        
+            "Height:": "97cm"        
+        }
+    }
+]

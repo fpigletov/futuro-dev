@@ -1,0 +1,109 @@
+<div class="modal">
+    <div class="modal__body">
+        <button type="button" class="modal__close icon-close" aria-label="Close modal window"></button>
+        <div class="modal__content">            
+            <form action="#" method="POST" class="modal__login login-modal form-modal">
+                <h2 class="form-modal__title title">Login</h2> 
+                <div class="form-modal__content">
+                    <label class="form-modal__item">
+                        <span class="form-modal__name">Email<span>*</span></span>
+                        <input class="form-modal__input" name="Email" type="email" autocomplete="off" data-validate-field="email">
+                    </label>
+                    <label class="form-modal__item">
+                        <span class="form-modal__name">Password<span>*</span></span>
+                        <input class="form-modal__input" name="Password" type="password" autocomplete="off" data-validate-field="password">
+                    </label>                        
+                    <label class="form-modal__item">
+                        <input name="Password-checkbox[]" type="checkbox" class="form-modal__checkbox checkbox" value="save">
+                        <span class="form-modal__tag checkbox-tag">Save Password</span>
+                    </label>
+                </div> 
+                <button type="submit" class="form-modal__btn btn btn-orange">Login</button>
+            </form> 
+            <form action="#" method="POST" class="modal__checkout checkout-modal form-modal" data-simplebar>                
+                    <h2 class="form-modal__title title">Checkout</h2>
+                    <ul class="form-modal__wrapper">
+                        <li class="form-modal__column">
+                            <label class="form-modal__item">
+                                <span class="form-modal__name">Full name<span>*</span></span>
+                                <input class="form-modal__input" autocomplete="off" name="Fullname" type="text" data-validate-field="fullname">
+                            </label>
+                            <label class="form-modal__item">
+                                <span class="form-modal__name">Phone<span>*</span></span>
+                                <input class="form-modal__input" autocomplete="off" name="Phone" type="tel" data-validate-field="phone">
+                            </label>                            
+                            <label class="form-modal__item">
+                                <span class="form-modal__name">Email<span>*</span></span>
+                                <input class="form-modal__input" name="Email" type="email" data-validate-field="email">
+                            </label>
+                        </li>
+                        <li class="form-modal__column">
+                            <div class="form-modal__item">
+                                <div class="form-modal__name">Payment<span>*</span></div>
+                                <select name="Payment" class="form-modal__select">
+                                    <option class="form-modal__option" value="Credit_card">Credit card</option>
+                                    <option class="form-modal__option" value="Cash">Cash</option>
+                                </select>
+                            </div>   
+                            <label class="form-modal__item">
+                                <span class="form-modal__name">Address<span>*</span></span>
+                                <input class="form-modal__input" autocomplete="off" name="Address" type="text" data-validate-field="address">
+                            </label>
+                            <div class="form-modal__required">
+                                <span>*</span> Required fields
+                            </div>       
+                        </li>
+                    </ul>
+                    <div class="form-modal__order order-checkout"></div>                    
+                </div>
+            </form>  
+            <div class="modal__image">
+                <img src="img/furniture/01.jpg" alt="Furniture">
+            </div>            
+            <div class="modal__message"></div>    
+            <div class="modal__favorite favorite-modal" data-simplebar></div>   
+            <div class="modal__product product-modal" data-simplebar>
+                <div class="product-modal__wrapper" data-simplebar>
+                    <div data-product-id="" class="product-modal__body"> 
+                        <div class="product-modal__content">
+                            <div class="product-modal__slider slider-product">
+                                <div class="slider-product__mainslider swiper">
+                                    <div class="slider-product__wrapper swiper-wrapper">
+                                        <div class="slider-product__slide swiper-slide">
+                                            <div data-slide-zoom="0" class="slider-product__zoom swiper-zoom-container" data-swiper-zoom="3">
+                                            </div>
+                                        </div>
+                                        <div class="slider-product__slide swiper-slide">
+                                            <div data-slide-zoom="1" class="slider-product__zoom swiper-zoom-container" data-swiper-zoom="3">
+                                            </div>
+                                        </div>
+                                        <div class="slider-product__slide swiper-slide">
+                                            <div data-slide-zoom="2" class="slider-product__zoom swiper-zoom-container" data-swiper-zoom="3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-product__subslider swiper">
+                                    <div class="slider-product__subwrapper swiper-wrapper">
+                                        <div class="slider-product__subslide swiper-slide"></div>
+                                        <div class="slider-product__subslide swiper-slide"></div>
+                                        <div class="slider-product__subslide swiper-slide"></div>
+                                    </div>                                            
+                                </div>
+                            </div>
+                            <div class="product-modal__info">
+                                <h2 class="product-modal__title title"></h2>        
+                                <h3 class="product-modal__subtitle"></h3>   
+                                <div class="product-modal__prices"></div>
+                                <div class="product-modal__descr"></div>
+                                <button type="button" class="product-modal__btn btn btn-orange">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>  
+                </div>                        
+            </div> 
+            <div class="modal__blog blog-modal" data-simplebar>                
+            </div>  
+        </div>
+    </div>
+</div>

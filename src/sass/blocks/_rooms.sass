@@ -1,0 +1,159 @@
+.rooms
+    background: $light-blue-color
+    overflow: hidden
+
+    &__container
+        @media (min-width: $md2)
+            display: flex
+
+    &__info
+        flex: 0 0 37.419%
+        position: relative
+        z-index: 5
+        align-self: center
+        margin-bottom: 20px
+        @media (min-width: $md1)
+            padding-right: 86px
+        @media (min-width: $md2)
+            padding-right: 30px
+
+    &__title
+        margin-bottom: 8px
+        text-align: left
+
+    &__text
+        line-height: 150%
+        color: $gray-color
+        margin-bottom: 24px
+
+    &__btn
+        height: 48px
+        padding: 0 40px
+
+    &__slider
+        flex: 1 1 auto
+        min-width: 0
+        align-self: flex-start
+        position: relative
+        @media (max-width: $md4)
+            margin: 0 -15px
+
+.slider-rooms
+
+    &__body
+        overflow: visible
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: -2px
+            left: 0
+            height: 100%
+            width: 100vw
+            background-color: $light-blue-color
+            z-index: 2
+            transform: translateX(-100%)
+
+    &__slide
+        width: 372px
+        position: relative
+        overflow: hidden
+        height: 585px
+        @media (max-width: $md1)
+            height: 540px
+        @media (max-width: $md2)
+            height: 480px
+        @media (max-width: $md3)
+            height: 440px
+        @media (max-width: $md4)
+            height: 400px
+            width: 100%
+        &.swiper-slide-active
+            .slide-rooms__image
+                height: 100%
+
+    &__arrows
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        width: 100%
+        z-index: 5
+        display: flex
+        justify-content: space-between
+        pointer-events: none
+        @media (max-width: $md3)
+            display: none
+
+    &__arrow
+        pointer-events: auto
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal
+        @media (min-width: $md3)
+            position: absolute
+            bottom: 30px
+            left: 396px
+            width: 100%
+            z-index: 5
+        @media (max-width: $md3)
+            justify-content: center
+            padding-top: 15px
+
+.slide-rooms
+
+    &__image
+        width: 100%
+        height: 100%
+        transition: height 0.8s ease 0s
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        @media (min-width: $md3)
+            height: 83%
+
+    &__content
+        position: absolute
+        color: inherit
+        left: 24px
+        bottom: 24px
+        padding: 32px
+        background: rgba(255, 255, 255, 0.72)
+        backdrop-filter: blur(3px)
+        &:before
+            position: absolute
+            bottom: 0
+            right: 0
+            transform: translateX(100%)
+            width: 48px
+            height: 48px
+            background: $orange-color
+            color: $white-color
+            display: flex
+            justify-content: center
+            align-items: center
+        @media (max-width: $md3)
+            left: 15px
+            bottom: 15px
+            padding: 15px
+
+    &__title
+        font-weight: 600
+        font-size: 28px
+        line-height: 120%
+        @media (max-width: $md3)
+            font-size: 24px
+
+    &__label
+        display: grid
+        grid-template-columns: auto 27px auto
+        column-gap: 8px
+        margin-bottom: 8px
+        line-height: 150%
+        color: $gray-color
+        align-items: center
+        justify-content: start
+
+    &__line
+        height: 1px
+        background-color: $gray-color
