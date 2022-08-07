@@ -22,6 +22,8 @@
         padding: 10px 10px
         display: flex
         align-items: center
+        will-change: min-height
+        transition: min-height 0.3 ease
         @media (max-width: $md2)
             min-height: 90px
         @media (max-width: $md3)
@@ -107,11 +109,6 @@
             width: 100%
             &:not(:last-child)
                 margin: 0 0 25px 0
-        @media (any-hover: hover)
-            &:hover
-                .menu-header__link,
-                .menu-header__arrow
-                    color: $orange-color
         &[data-header-item]
             position: relative
             &.active
@@ -125,26 +122,36 @@
                     opacity: 1
                     visibility: visible
 
-    &__link
+    &__link,
+    &__btn
         display: flex
         align-items: center
         transition: color 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                color: $orange-color
         @media (max-width: $md3)
             font-size: 36px
         @media (max-width: $md4)
             font-size: 26px
+        @media (max-width: $md3)
+            justify-content: center
+
+    &__btn
         &.active
             color: $orange-color
             .menu-header__arrow
                 transform: rotate(-180deg)
-        @media (max-width: $md3)
-            justify-content: center
+            + .menu-header__sublist
+                pointer-events: auto
+                opacity: 1
+                visibility: visible
 
     &__arrow
         display: block
         font-size: 10px
         margin-left: 8px
-        transition: color 0.3s ease, transform 0.3s ease
+        transition: transform 0.3s ease
         @media (max-width: $md3)
             font-size: 24px
         @media (max-width: $md4)
@@ -203,6 +210,7 @@
         height: 100%
         width: 100%
         display: flex
+        flex-direction: row-reverse
         align-items: center
 
     &__results

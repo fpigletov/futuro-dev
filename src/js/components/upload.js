@@ -36,12 +36,12 @@ export function uploadFromDB() {
                                 </div>
                                 <div class="item-products__body">
                                     <div class="item-products__content">
-                                        <h4 class="item-products__title">${item.title}</h4>
+                                        <h3 class="item-products__title">${item.title}</h3>
                                         <span class="item-products__text">${item.subtitle}</span>
                                     </div>
                                     <div class="item-products__prices">
                                         <div class="item-products__price">${item.price}$</div>
-                                        <div class="item-products__price item-products__price_old">${item.oldPrice ? item.oldPrice : ''}</div>
+                                        <div class="item-products__price item-products__price_old">${item.oldPrice ? item.oldPrice + '$' : ''}</div>
                                     </div>
                                     <div class="item-products__actions item-products__actions_reg actions-product">
                                         <div class="actions-product__body">
@@ -122,12 +122,43 @@ export function uploadFromDB() {
                                     </picture>
                                 </a>
                                 <div class="slider-tips__content">
-                                    <a href="#" class="slider-tips__title">${blogItem.title}</a>
+                                    <button type="button" class="slider-tips__title">${blogItem.title}</button>
                                     <span class="slider-tips__date">${blogItem.date}</span>
                                 </div>
                             </li>   
                         `;
                 }
+            })
+            .then(() => {
+                new Swiper('.slider-tips__body', {
+                    grabCursor: true,
+                    observer: true,
+                    observeParents: true,
+                    watchSlidesProgress: true,
+                    slidesPerView: 3,
+                    spaceBetween: 32,
+                    speed: 800,
+                    loop: true,
+                    watchOverflow: true,		
+                    navigation: {
+                        nextEl: '.slider-tips__arrow_next',
+                        prevEl: '.slider-tips__arrow_prev',
+                    },
+                    breakpoints: {                        
+                        320: {
+                            slidesPerView: 1.1,
+                            spaceBetween: 15
+                        },                        
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },                        
+                        992: {
+                            slidesPerView: 3,
+                            spaceBetween: 32
+                        }
+                    }
+                });
             })
             .catch(err => alert(err));
         

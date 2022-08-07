@@ -166,6 +166,30 @@ export function openProductModal(id) {
                 
                 
             })
+            .then(() => {
+                let sliderProductSlides = new Swiper(".slider-product__subslider", {
+                    loop: false,
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                });
+                
+                let sliderProduct = new Swiper(".slider-product__mainslider", {
+                    loop: true,
+                    spaceBetween: 10,
+                    effect: 'fade',
+                    keyboard: {
+                        enabled: true,
+                    },
+                    zoom: {
+                        maxRatio: 3,
+                    },
+                    thumbs: {
+                        swiper: sliderProductSlides,
+                    },
+                });        
+            })
             .catch(err => alert(err));
 }
     
@@ -190,7 +214,7 @@ export function openBlogModal(id) {
                         <div class="blog-modal__content">
                             <h2 class="blog-modal__title title">${item.title}</h2>
                             <div class="blog-modal__date">${item.date}</div>
-                            <div class="blog-modal__descr"></div>
+                            <ul class="blog-modal__descr"></ul>
                         </div>
                     </div>
                 `;
@@ -199,10 +223,10 @@ export function openBlogModal(id) {
 
                 for (let j = 0; j < Object.keys(item.descr).length; j++) {
                     blogDescr.innerHTML += `
-                        <span>${Object.values(item.descr)[j]}</span>
+                        <li>${Object.values(item.descr)[j]}</li>
                     `;
                 }
 
-            })
+            })            
             .catch(err => alert(err));
     }

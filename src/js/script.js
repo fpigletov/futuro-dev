@@ -8,8 +8,6 @@ import { openBlogModal } from './components/modals';
 import { slideToggle } from './components/modules';
 import { homeSlider } from './components/sliders'; 
 import { roomSlider } from './components/sliders'; 
-import { tipsSlider } from './components/sliders'; 
-import { productSlider } from './components/sliders'; 
 import { uploadFromDB } from './components/upload'; 
 import { searchLogic } from './components/search'; 
 
@@ -22,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.querySelector('.actions-header__search');
     const headerSearch = document.querySelector('.header__search');
     const headerMenuItems = document.querySelectorAll('[data-header-item]');
-    const headerLinks = document.querySelectorAll('.menu-header__link');
+    const headerBtns = document.querySelectorAll('.menu-header__btn');
     const favoriteBtn = document.querySelector('.favorite-header__btn');
     const headerCart = document.querySelector('.actions-header__cart');
     const userBtn = document.querySelector('.actions-header__user');
@@ -32,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     burgerBtn.addEventListener('click', () => {
         headerMenu.classList.toggle('active');
         burgerBtn.classList.toggle('active');
-        headerLinks.forEach(item => {
+        headerBtns.forEach(item => {
             if (item.classList.contains('active')) {
                 item.classList.remove('active');
                 slideUp(item.nextSibling);
@@ -69,7 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 searchBtn.classList.remove('active');
             }
 
-            headerMenuItems.forEach(item => {
+            headerBtns.forEach(item => {
                 if (item.classList.contains('active')) {
                     item.classList.remove('active');
                 }
@@ -92,7 +90,13 @@ window.addEventListener('DOMContentLoaded', () => {
 		}		
     }
 
-    window.addEventListener('scroll', activeHeader);
+    window.addEventListener('scroll', () => {
+        activeHeader();
+
+        if (headerSearch.classList.contains('active')) {
+            headerSearch.classList.remove('active');
+        }
+    });
 
     function dinamicAdaptiv() {
         const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth);
@@ -123,10 +127,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Subitems
     const headerLinksActions = () => {
-        headerMenuItems.forEach(item => {        
+        headerBtns.forEach(item => {        
             item.addEventListener('click', (e) => {
                 e.preventDefault();
-                headerMenuItems.forEach(el => { 
+                headerBtns.forEach(el => { 
                     if (el !== e.currentTarget) {
                         el.classList.remove('active');
                     }                        
@@ -139,7 +143,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', (e) => {
             const target = e.target;
             if (!target.closest('.menu-header__item')) {
-                headerMenuItems.forEach(item => {
+                headerBtns.forEach(item => {
                     item.classList.remove('active');
                 });
             }                
@@ -150,11 +154,11 @@ window.addEventListener('DOMContentLoaded', () => {
         const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth);
 
         if (viewportWidth <= 768) {
-            headerLinks.forEach(item => { 
+            headerBtns.forEach(item => { 
                 item.addEventListener('click', (e) => {
                     e.preventDefault();  
                     const target = e.currentTarget;
-                    headerLinks.forEach(el => {
+                    headerBtns.forEach(el => {
                         if (el !== target) {
                             slideUp(el.nextElementSibling); 
                             el.classList.remove('active');
@@ -185,19 +189,11 @@ window.addEventListener('DOMContentLoaded', () => {
         headerLinksActions();
     }
 
-    
-
     //Home Slider
     homeSlider();
 
     //Rooms Slider
     roomSlider();
-    
-    //Tips Slider
-    tipsSlider();
-
-    //Product Slider
-    productSlider();
 
     //Product Modal
     modal('show-product', '.modal__product');
@@ -258,14 +254,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         removeClasses();
 
-        headerLinks.forEach(item => {
+        headerBtns.forEach(item => {
             if (item.classList.contains('active')) {
                 item.classList.remove('active');
                 slideUp(item.nextSibling);
             }
         });
 
-        headerMenuItems.forEach(item => {
+        headerBtns.forEach(item => {
             if (item.classList.contains('active')) {
                 item.classList.remove('active');
             }
