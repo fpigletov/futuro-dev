@@ -115,14 +115,14 @@ export function uploadFromDB() {
                         
                         blogWrapper.innerHTML += `
                             <li data-tips-id="${blogItem.id}" class="slider-tips__slide swiper-slide">
-                                <a href="#" class="slider-tips__image">
+                                <a href="#" class="slider-tips__image open-blog">
                                     <picture>
                                         <source srcset="${blogItem.mainImageWebp}" type="image/webp">
-                                        <img loading="lazy" src="${blogItem.mainImageJpg}" class="slider-tips__img" alt="${blogItem.mainImageAlt}">
+                                        <img loading="lazy" src="${blogItem.mainImageJpg}" class="slider-tips__img open-blog" alt="${blogItem.mainImageAlt}">
                                     </picture>
                                 </a>
                                 <div class="slider-tips__content">
-                                    <button type="button" class="slider-tips__title">${blogItem.title}</button>
+                                    <button type="button" class="slider-tips__title open-blog">${blogItem.title}</button>
                                     <span class="slider-tips__date">${blogItem.date}</span>
                                 </div>
                             </li>   

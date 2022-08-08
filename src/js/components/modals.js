@@ -21,7 +21,13 @@ export function modal(triggerElement, contentSelector, triggerSelector) {
         document.body.style.paddingRight = scrollWidth;            
         header.style.paddingRight = scrollWidth;
 
-        lastFocusedEl = document.activeElement;
+        if (triggerElement === 'open-blog') {
+            lastFocusedEl = document.querySelector('.slider-tips__image');
+        } else {
+            lastFocusedEl = document.activeElement;
+        }
+
+        
         
         Array.from(document.body.children).forEach(item => {
             if (item !== modal) {
@@ -74,8 +80,10 @@ export function modal(triggerElement, contentSelector, triggerSelector) {
     }
 
     modal.addEventListener('click', (e) => {
-        if (e.target === modal && modal.classList.contains('active') && modalContent.classList.contains('active')) {
+        if (e.target === modal && modal.classList.contains('active') &&
+            modalContent.classList.contains('active')) {
             closeModal();
+            lastFocusedEl.focus();
         }
 
         if (e.target.classList.contains('to-products')) {             
@@ -85,7 +93,8 @@ export function modal(triggerElement, contentSelector, triggerSelector) {
     });
 
     window.addEventListener('keydown', (e) => {
-        if (e.code === 'Escape' && modal.classList.contains('active') && modalContent.classList.contains('active')) {
+        if (e.code === 'Escape' && modal.classList.contains('active') &&
+            modalContent.classList.contains('active')) {
             closeModal();
             lastFocusedEl.focus();
         }

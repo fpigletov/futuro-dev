@@ -199,10 +199,8 @@ window.addEventListener('DOMContentLoaded', () => {
     modal('show-product', '.modal__product');
 
     //Blog Modal
-    modal('slider-tips__img', '.modal__blog');
-    modal('slider-tips__image', '.modal__blog');
-    modal('slider-tips__title', '.modal__blog');
-
+    modal('open-blog', '.modal__blog');
+    
     // Login Modal    
     modal('account-link', '.modal__login');
 
